@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    
+
+        
+        <RadioGroup
+            android:id="@+id/order_grp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:layout_weight="0.5"
+                android:text="Ascending"
+                android:id="@+id/asc"
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+            <RadioButton
+                android:id="@+id/dsc"
+                android:layout_weight="0.5"
+                android:text="Decending"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+            
+        </RadioGroup>
+        
+    <TextView
+        android:text="Currency"
+        android:id="@+id/sort_currency"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="MinConfirmation"
+        android:id="@+id/sort_minconfirm"
+        android:textSize="15sp"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="TxFee"
+        android:id="@+id/sort_txfee"
+        android:textSize="15sp"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/sort_btn"
+        android:text="sort"
+        android:textSize="16sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    
+</LinearLayout>
