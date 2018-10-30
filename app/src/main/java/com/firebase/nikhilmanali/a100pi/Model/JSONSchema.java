@@ -8,13 +8,15 @@ public class JSONSchema {
 
     String Currency;
     String CurrencyLong;
-    String TxFee;
+    Double TxFee;
+    int MinConfirmation;
 
 
-   public JSONSchema(String Currency,String CurrencyLong,String TxFee){
+   public JSONSchema(String Currency,String CurrencyLong,Double TxFee,int MinConfirmation){
        this.Currency=Currency;
        this.CurrencyLong=CurrencyLong;
        this.TxFee=TxFee;
+       this.MinConfirmation=MinConfirmation;
    }
 
 
@@ -34,14 +36,22 @@ public class JSONSchema {
         CurrencyLong = currencyLong;
     }
 
-    public String getTxFee() {
+    public Double getTxFee() {
         return TxFee;
     }
 
-    public void setTxFee(String txFee) {
+    public void setTxFee(double txFee) {
         TxFee = txFee;
     }
 
+
+    public int getMinConfirmation() {
+        return MinConfirmation;
+    }
+
+    public void setMinConfirmation(int minConfirmation) {
+        MinConfirmation = minConfirmation;
+    }
 
 
 }

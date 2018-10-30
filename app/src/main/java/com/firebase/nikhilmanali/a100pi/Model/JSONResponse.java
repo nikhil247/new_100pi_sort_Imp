@@ -3,7 +3,8 @@ package com.firebase.nikhilmanali.a100pi.Model;
 
 public class JSONResponse {
 
-    public static String response=" {\n" +
+    public static String response=" \n" +
+            "{\n" +
             "  \"success\": true,\n" +
             "  \"message\": \"\",\n" +
             "  \"result\": [\n" +
@@ -39,9 +40,31 @@ public class JSONResponse {
             "      \"CoinType\": \"BITCOIN\",\n" +
             "      \"BaseAddress\": null,\n" +
             "      \"Notice\": null\n" +
+            "    },\n" +
+            "    {\n" +
+            "      \"Currency\": \"THN\",\n" +
+            "      \"CurrencyLong\": \"BlackCoin\",\n" +
+            "      \"MinConfirmation\": 3,\n" +
+            "      \"TxFee\": 0.093,\n" +
+            "      \"IsActive\": true,\n" +
+            "      \"IsRestricted\": false,\n" +
+            "      \"CoinType\": \"BITCOIN\",\n" +
+            "      \"BaseAddress\": null,\n" +
+            "      \"Notice\": null\n" +
+            "    },\n" +
+            "    {\n" +
+            "      \"Currency\": \"NIK\",\n" +
+            "      \"CurrencyLong\": \"Litecoin\",\n" +
+            "      \"MinConfirmation\": 7,\n" +
+            "      \"TxFee\": 0.013,\n" +
+            "      \"IsActive\": true,\n" +
+            "      \"IsRestricted\": false,\n" +
+            "      \"CoinType\": \"BITCOIN\",\n" +
+            "      \"BaseAddress\": null,\n" +
+            "      \"Notice\": null\n" +
             "    }\n" +
             "  ]\n" +
-            "} " ;
+            "}\n " ;
 
 
 }

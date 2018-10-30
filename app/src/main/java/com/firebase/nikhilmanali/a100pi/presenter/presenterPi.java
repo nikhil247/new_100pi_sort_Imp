@@ -1,6 +1,8 @@
 package com.firebase.nikhilmanali.a100pi.presenter;
 
 
+import android.util.Log;
+
 import com.firebase.nikhilmanali.a100pi.Interface.viewInterface;
 import com.firebase.nikhilmanali.a100pi.Model.JSONResponse;
 import com.firebase.nikhilmanali.a100pi.Model.JSONSchema;
@@ -13,23 +15,10 @@ import java.util.List;
 
 public class presenterPi {
 
+    public presenterPi(){}  // Self intializing constructor for presenter
 
-    List<JSONSchema> list;
-    public presenterPi(){
-        list=new ArrayList<>();
-           addItem();
-
-    }
-
-    public void onBindViewAtPosition(int position,viewInterface view) {
-                 JSONSchema schema=list.get(position);
-                 view.setCurrency(schema.getCurrency());
-                 view.setCurrencyLong(schema.getCurrencyLong());
-                 view.setTxFee(schema.getTxFee());
-
-    }
-
-    public void addItem(){
+    public List<JSONSchema> addItem(){    /// This method will return a list with which store Data in JSONSchema elements
+        List<JSONSchema> list=new ArrayList<>();
 
         try {
             JSONObject jsonObject=new JSONObject(JSONResponse.response);
@@ -37,16 +26,15 @@ public class presenterPi {
 
             for(int i=0;i<array.length();i++){
                 JSONObject object=array.getJSONObject(i);
-                list.add(new JSONSchema(object.getString("Currency"),object.getString("CurrencyLong"),object.getString("TxFee")));
+                list.add(new JSONSchema(object.getString("Currency"),object.getString("CurrencyLong"),object.getDouble("TxFee"),object.getInt("MinConfirmation")));
             }
         }catch (Exception e){
-
+            Log.d("error",e+"");
         }
+        return list;
     }
 
-    public int listSize(){
-        return list.size();
-    }
+
 
 }
 

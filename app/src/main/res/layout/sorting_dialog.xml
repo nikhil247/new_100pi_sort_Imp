@@ -5,7 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    
+    <TextView
+        android:padding="10dp"
+        android:text="Order By"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
         
         <RadioGroup
@@ -29,16 +33,27 @@
                 android:layout_height="match_parent" />
             
         </RadioGroup>
-        
+
     <TextView
+        android:padding="10dp"
+        android:text="Category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <RadioGroup
+        android:id="@+id/category"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <RadioButton
         android:text="Currency"
         android:id="@+id/sort_currency"
         android:padding="10dp"
         android:textSize="15sp"
+        android:checked="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <TextView
+    <RadioButton
         android:text="MinConfirmation"
         android:id="@+id/sort_minconfirm"
         android:textSize="15sp"
@@ -46,14 +61,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <TextView
+    <RadioButton
         android:text="TxFee"
         android:id="@+id/sort_txfee"
         android:textSize="15sp"
         android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-
+</RadioGroup>
     <Button
         android:id="@+id/sort_btn"
         android:text="sort"
